@@ -1,0 +1,18 @@
+version: 2
+updates:
+  # Composer (PHP/Laravel)
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"    # diário? troque para "daily" se preferir
+    open-pull-requests-limit: 10
+    labels: ["dependencies", "composer"]
+    versioning-strategy: increase
+  # NPM (Vite/JS)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels: ["dependencies", "npm"]
+    versioning-strategy: increase
